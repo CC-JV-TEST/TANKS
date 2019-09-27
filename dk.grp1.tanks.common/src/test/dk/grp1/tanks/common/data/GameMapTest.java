@@ -1,6 +1,5 @@
 package dk.grp1.tanks.common.data;
 
-import com.sun.javafx.geom.Vec2d;
 import dk.grp1.tanks.common.utils.GameMapFunctionComparator;
 import dk.grp1.tanks.common.utils.Vector2D;
 import org.junit.Before;
