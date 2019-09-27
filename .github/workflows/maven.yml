@@ -1,0 +1,13 @@
+name: Java CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Pull Docker image
+        uses: docker://cfeicommon/maven-jdk8-fx:latest
+      - name: Build TANKS  
+        run: mvn clean install -DskipTests
