@@ -11,3 +11,10 @@ jobs:
         uses: docker://cfeicommon/maven-jdk8-fx:latest
       - name: Build TANKS  
         run: mvn clean install -DskipTests
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: SonarQube
+        run: mvn sonar:sonar -Dsonar.projectKey=CC-JV-TEST_TANKS -Dsonar.organization=cc-jv-test -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=e94524acde0ac10bd14df211574dd0c3c76f1411
+
