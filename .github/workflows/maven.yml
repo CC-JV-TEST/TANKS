@@ -11,9 +11,18 @@ jobs:
         uses: docker://cfeicommon/maven-jdk8-fx:latest
       - name: Build TANKS  
         run: mvn clean install -DskipTests
+  unit-test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v1
+      - name: Pull Docker image
+        uses: docker://cfeicommon/maven-jdk8-fx:latest
+      - name: Build TANKS  
+        run: mvn verify
   quality:
     name: SonarCloud
-    needs: build
+    needs: unit-test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
