@@ -13,6 +13,7 @@ jobs:
         run: mvn clean install -DskipTests
   quality:
     name: SonarCloud
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
