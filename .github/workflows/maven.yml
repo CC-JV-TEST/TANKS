@@ -20,8 +20,7 @@ jobs:
     - name: SonarCloud Scan
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: >
-          ./mvnw --batch-mode clean
+      run: mvn --batch-mode clean
           org.jacoco:jacoco-maven-plugin:prepare-agent verify
           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
           -Dsonar.host.url=https://sonarcloud.io
