@@ -26,5 +26,4 @@ jobs:
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=cc-jv-test
           -Dsonar.projectKey=CC-JV-TEST_TANKS
-          -Dsonar.login=e94524acde0ac10bd14df211574dd0c3c76f1411  
-        
+          -Dsonar.login=e94524acde0ac10bd14df211574dd0c3c76f1411
